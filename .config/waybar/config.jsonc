@@ -11,6 +11,8 @@
     "battery",
     "clock",
     "tray",
+    "custom/lock",
+    "custom/power",
   ],
 
   "pulseaudio": {
@@ -100,5 +102,15 @@
     "interval": 30,
     "format": " {}%",
     "max-length": 10,
+  },
+  "custom/lock": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprlock &",
+  },
+  "custom/power": {
+    "on-click": "wlogout &",
+    "format": "",
+    "tooltip": false,
   },
 }
