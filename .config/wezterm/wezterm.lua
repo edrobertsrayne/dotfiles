@@ -8,6 +8,7 @@ return {
 	macos_window_background_blur = 30,
 	window_background_opacity = 0.95,
 	window_decorations = "RESIZE",
+	warn_about_missing_glyphs = false,
 	keys = {
 		{
 			key = "f",
