@@ -6,6 +6,10 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+if which brew &>/dev/null; then
+  eval "$(brew shellenv)"
+fi
+
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -22,10 +26,12 @@ eval "$(atuin init zsh)"
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=$'\033[2mdirenv: %s\033[0m'
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -d /usr/share/zsh/plugins ]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-autoload -U compinit; compinit
+autoload -Uz compinit; compinit
 
 alias c='clear'
 alias ls='eza --icons --git'
