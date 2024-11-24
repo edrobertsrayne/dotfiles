@@ -2,37 +2,47 @@
 
 * {
   font-family: "Noto Sans";
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   min-height: 0;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 5px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+.modules-left {
+  margin-left: 8px;
 }
 
 #workspaces {
   border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
   margin-left: 1rem;
+  background-color: @base;
 }
 
 #workspaces button {
   color: @lavender;
   border-radius: 1rem;
-  padding: 0.4rem;
+  padding: 0.5rem;
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @mantle;
+  background-color: @sapphire;
   border-radius: 1rem;
 }
 
 #workspaces button:hover {
   color: @sapphire;
   border-radius: 1rem;
+  background-color: @mantle;
 }
 
 #custom-music,
@@ -46,24 +56,24 @@
 #pulseaudio,
 #custom-lock,
 #custom-power {
-  background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
+  background-color: @base;
+  padding: 0.5rem;
   border-radius: 0rem;
+  margin: 5px 0px;
 }
 
 #cpu {
   border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+  padding-left: 1rem;
 }
 
 #clock {
   border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+  padding-right: 1rem;
 }
 
 #clock {
-  color: @lavender;
+  color: @yellow;
 }
 
 #battery {
@@ -79,11 +89,11 @@
 }
 
 #backlight {
-  color: @rosewater;
+  color: @teal;
 }
 
 #pulseaudio {
-  color: @pink;
+  color: @blue;
 }
 
 #pulseaudio.muted {
@@ -91,15 +101,15 @@
 }
 
 #network {
-  color: @sapphire;
+  color: @teal;
 }
 
 #cpu {
-  color: @yellow;
+  color: @flamingo;
 }
 
 #memory {
-  color: @teal;
+  color: @mauve;
 }
 
 #custom-music {
@@ -109,16 +119,20 @@
 
 #custom-lock {
   border-radius: 1rem 0px 0px 1rem;
+  padding-left: 1rem;
   color: @lavender;
 }
 
 #custom-power {
-  margin-right: 1rem;
+  padding-right: 1rem;
   border-radius: 0px 1rem 1rem 0px;
   color: @red;
+  margin-right: 0;
 }
 
 #tray {
-  margin-right: 1rem;
   border-radius: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: 1rem;
 }

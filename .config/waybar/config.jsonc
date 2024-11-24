@@ -1,31 +1,27 @@
 {
   "layer": "top",
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["custom/lock", "custom/power", "hyprland/workspaces"],
   "modules-center": [],
   "modules-right": [
+    "tray",
     "cpu",
     "memory",
     "pulseaudio",
     "backlight",
-    "network",
     "battery",
     "clock",
-    "tray",
-    "custom/lock",
-    "custom/power",
   ],
 
   "pulseaudio": {
     "tooltip": false,
     "scroll-step": 5,
-    "format": "{icon} {volume}%",
-    "format-muted": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
+    "format-muted": "{icon}  {volume}%",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format-icons": {
       "default": ["", "", ""],
     },
   },
-
   "hyprland/workspaces": {
     "on-click": "activate",
     "active-only": false,
@@ -42,12 +38,13 @@
   },
   "network": {
     "tooltip": false,
-    "format-wifi": "  {essid}",
+    "format-wifi": "   {essid}",
     "format-ethernet": "",
+    "on-click": "nm-connection-editor",
   },
   "backlight": {
     "tooltip": false,
-    "format": " {}%",
+    "format": "  {}%",
     "interval": 1,
     "on-scroll-up": "light -A 5",
     "on-scroll-down": "light -U 5",
@@ -59,8 +56,8 @@
       "critical": 20,
     },
     "format": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""],
   },
@@ -69,7 +66,7 @@
     "spacing": 10,
   },
   "clock": {
-    "format": " {:%H:%M}",
+    "format": "  {:%H:%M}",
     "format-alt": "{:%A, %B %d, %Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -95,12 +92,12 @@
   },
   "cpu": {
     "interval": 15,
-    "format": " {}%",
+    "format": "  {}%",
     "max-length": 10,
   },
   "memory": {
     "interval": 30,
-    "format": " {}%",
+    "format": "  {}%",
     "max-length": 10,
   },
   "custom/lock": {
