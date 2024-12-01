@@ -61,6 +61,7 @@
   padding: 0.5rem;
   border-radius: 0rem;
   margin: 5px 0px;
+  color: @text;
 }
 
 #cpu {
@@ -73,14 +74,6 @@
   padding-right: 1rem;
 }
 
-#clock {
-  color: @yellow;
-}
-
-#battery {
-  color: @green;
-}
-
 #battery.charging {
   color: @green;
 }
@@ -89,28 +82,8 @@
   color: @red;
 }
 
-#backlight {
-  color: @teal;
-}
-
-#pulseaudio {
-  color: @blue;
-}
-
 #pulseaudio.muted {
   color: @red;
-}
-
-#network {
-  color: @teal;
-}
-
-#cpu {
-  color: @flamingo;
-}
-
-#memory {
-  color: @mauve;
 }
 
 #custom-music {
