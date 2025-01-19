@@ -45,6 +45,14 @@ alias vim='$EDITOR'
 alias wifi='nmtui'
 alias diff='batdiff'
 
+if [ -d /usr/share/nvm ]; then
+  [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+  source /usr/share/nvm/nvm.sh
+  source /usr/share/nvm/bash_completion
+  source /usr/share/nvm/install-nvm-exec
+fi
+
+
 fcd() { cd "$(find . -type d -not -path '*/.*' | fzf)" && ls; }
 f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | wl-copy }
 fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
