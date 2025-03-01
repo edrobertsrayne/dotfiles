@@ -7,7 +7,7 @@ return {
 	font = wezterm.font("JetBrainsMono Nerd Font"),
 	macos_window_background_blur = 30,
 	window_background_opacity = 0.95,
-	window_decorations = "RESIZE",
+	window_decorations = "TITLE | RESIZE",
 	warn_about_missing_glyphs = false,
 	keys = {
 		{
