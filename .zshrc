@@ -44,6 +44,7 @@ alias v='$EDITOR'
 alias vim='$EDITOR'
 alias wifi='nmtui'
 alias diff='batdiff'
+alias tmux='tmux -u'
 
 if [ -d /usr/share/nvm ]; then
   [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
